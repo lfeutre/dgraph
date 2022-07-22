@@ -1,6 +1,6 @@
 {application, 'dgraph', [
     {description, "An LFE HTTP-based client library for dgraph"},
-    {vsn, git},
+    {vsn, "0.1.0-dev"},
     {registered, []},
     {applications, [
         kernel,
