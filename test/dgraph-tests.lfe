@@ -8,4 +8,4 @@
 ;;; -----------
 
 (deftest my-fun
-  (is-equal 'hellow-orld (dgraph:my-fun)))
+  (is-equal 'hello-world (dgraph:my-fun)))
