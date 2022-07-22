@@ -1,10 +1,11 @@
 (defmodule dgraph
-  (export
-   (my-fun 0)))
+  (export all))
 
 ;;; -----------
 ;;; library API
 ;;; -----------
 
-(defun my-fun ()
-  'hello-world)
+(defun start (opts)
+  (application:ensure_all_started 'hackney)
+  (dgraph-api:start_link opts))
+

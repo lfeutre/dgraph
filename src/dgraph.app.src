@@ -2,6 +2,7 @@
     {description, "An LFE HTTP-based client library for dgraph"},
     {vsn, "0.1.0-dev"},
     {registered, []},
+    {mod, {'dgraph-app', []}},
     {applications, [
         kernel,
         stdlib

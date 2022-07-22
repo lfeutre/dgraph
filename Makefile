@@ -5,6 +5,8 @@ docker:
 	-p 8080:8080 \
 	-p 9080:9080 \
 	-p 8000:8000 \
-	-v ~/dgraph:/dgraph \
+	-v `pwd`/priv/data/dgraph:/dgraph \
 	--name dgraph \
-	dgraph/standalone:v21.03.0
+	--rm \
+	dgraph/standalone:v21.03.0 \
+	--telemetry "sentry=false;"
