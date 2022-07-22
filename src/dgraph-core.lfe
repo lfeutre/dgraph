@@ -93,5 +93,5 @@
   (erlang:whereis (SERVER)))
 
 (defun url (path)
-  (io_lib:format "~s/~s" (list (base-url) path)))
+  (binary ((base-url) bitstring) (#"/" bitstring) (path bitstring)))
 
