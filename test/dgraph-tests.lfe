@@ -1,5 +1,6 @@
 (defmodule dgraph-tests
-  (behaviour ltest-unit))
+  (behaviour ltest-unit)
+  (export all))
 
 (include-lib "ltest/include/ltest-macros.lfe")
 
@@ -7,5 +8,5 @@
 ;;; library API
 ;;; -----------
 
-(deftest my-fun
-  (is-equal 'hello-world (dgraph:my-fun)))
+(deftest placeholder
+  (is-equal 1 1))
