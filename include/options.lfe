@@ -1,2 +1,5 @@
 (defrecord client-opts
-  base-url)
+  (base-url #""))
+
+(defrecord metrics-opts
+  (full 'false))

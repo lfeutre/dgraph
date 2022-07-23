@@ -13,12 +13,16 @@
      (err err))))
 
 (defun get (req)
-  (request (record-update req request method 'get)))
+  (request (update-request req method 'get)))
 
 (defun post (req)
-  (request (record-update req request method 'post)))
+  (request (update-request req method 'post)))
 
 ;; Utility functions
+
+(defun add-header
+  (((= (match-request headers h) req) field value)
+   (update-request req headers (lists:append `(#(,field ,value)) h))))
 
 (defun payload (data filename)
   (case filename

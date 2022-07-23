@@ -1,13 +1,12 @@
 (defrecord request
   (method 'get)
-  (path #b"")
+  (path #"")
   (headers '())
-  (data #b"")
-  (filename #b"")
+  (data #"")
+  (filename #"")
   (options '()))
 
 (defrecord response
   (status 200)
   (headers '())
   (body #""))
-           
