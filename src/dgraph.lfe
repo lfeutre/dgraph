@@ -20,6 +20,9 @@
 ;;; Low-level API
 ;;; -------------
 
+(defun alter ()
+  'tbd)
+
 (defun metrics ()
   (metrics (make-metrics-opts)))
 
@@ -41,6 +44,9 @@
    (dgraph-http:post
     (update-request req
                     headers (lists:append '(#(#"Content-Type" #"application/dql")) h)))))
+
+(defun transaction ()
+  'tbd)
 
 ;; Utility functions
 
