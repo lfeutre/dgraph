@@ -1,8 +1,9 @@
 (defrecord request
   (method 'get)
-  (path #b())
+  (path #b"")
   (headers '())
-  (payload #b())
+  (data #b"")
+  (filename #b"")
   (options '()))
 
 (defrecord response
