@@ -17,7 +17,7 @@
    (base-url 0)
    (pid 0)
    (echo 1)
-   (url 1)))
+   (url 1) (url 2)))
 
 (include-lib "include/options.lfe")
 
@@ -93,5 +93,11 @@
   (erlang:whereis (SERVER)))
 
 (defun url (path)
-  `(,(base-url) #"/" ,path))
+  (url path '()))
+
+(defun url (path query)
+  (let ((u `(,(base-url) #"/" ,path)))
+    (case query
+      ('() u)
+      (_ (lists:append u (list #"?" query))))))
 

@@ -2,6 +2,7 @@
   (method 'get)
   (path #"")
   (headers '())
+  (query '())
   (data #"")
   (filename #"")
   (options '()))

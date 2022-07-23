@@ -3,3 +3,6 @@
 
 (defrecord metrics-opts
   (full 'false))
+
+(defrecord mutate-opts
+  (commit-now? 'true))
